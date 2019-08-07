@@ -4,9 +4,9 @@ const logger = require('./hooks/logger');
 module.exports = {
 	before: {
 		all: [],
-		find: [logger()],
+		find: [],
 		get: [],
-		create: [logger()],
+		create: [],
 		update: [],
 		patch: [],
 		remove: [],
@@ -14,9 +14,9 @@ module.exports = {
 
 	after: {
 		all: [],
-		find: [logger()],
+		find: [],
 		get: [],
-		create: [logger()],
+		create: [],
 		update: [],
 		patch: [],
 		remove: [],

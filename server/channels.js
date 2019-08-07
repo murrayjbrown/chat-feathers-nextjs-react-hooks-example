@@ -8,8 +8,6 @@ module.exports = function(app) {
 
 	app.on('connection', connection => {
 		app.channel('everyone').join(connection);
-		// On a new real-time connection, add it to the anonymous channel
-		app.channel('anonymous').join(connection);
 	});
 
 	app.on('login', (authResult, { connection }) => {
@@ -20,9 +18,6 @@ module.exports = function(app) {
 		if (connection) {
 			// Obtain the logged in user from the connection
 			// const user = connection.user;
-
-			// The connection is no longer anonymous, remove it
-			app.channel('anonymous').leave(connection);
 
 			// Add it to the authenticated user channel
 			app.channel('authenticated').join(connection);

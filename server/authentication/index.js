@@ -1,7 +1,6 @@
 const authentication = require('@feathersjs/authentication');
 const jwt = require('@feathersjs/authentication-jwt');
 const local = require('@feathersjs/authentication-local');
-const anonymous = require('./anonymous');
 
 module.exports = function(app) {
 	const config = app.get('authentication');
@@ -10,11 +9,6 @@ module.exports = function(app) {
 	app.configure(authentication(config));
 	app.configure(jwt());
 	app.configure(local());
-	app.configure(
-		anonymous({
-			userService: 'users',
-		}),
-	);
 
 	// The `authentication` service is used to create a JWT.
 	// The before `create` hook registers strategies that can be used

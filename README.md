@@ -5,6 +5,7 @@ This is an experimental project for honing Node.js full-stack skills, notably:
 - Feathers: a REST and real-time API layer for Node.js and the browser
 - composing Express applications: Feathers & Next.js
 - websocket-based messaging
+- LWT-based user authentication
 
 The chat application is derived from Feathers sample projects:
 
