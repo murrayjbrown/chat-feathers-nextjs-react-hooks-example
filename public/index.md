@@ -24,7 +24,7 @@ which implements the following features:
 - JSX styling w/ Bulma Sass
 - Markdown
 - Immer for state immutability
-- axios http w/ async/wait
+- axios http w/ async/await
 - AVA and Jest for unit testing
 - ARIA attributes for accessibilty & testing
 - Cypress for integration and end-to-end testing
